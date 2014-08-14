@@ -1,0 +1,105 @@
+//----------------------------------*\
+// BUTTON ACTION
+//----------------------------------*/
+.btn_action {
+	position: relative;
+	background-color: #05D4F6;
+	display: inline-block;
+	text-align: left;
+	color: #fff;
+	font-weight: normal;
+	height: 37px;
+	line-height: 37px;
+	font-size: 20px;
+	padding: 0 55px 0 15px;
+	text-transform: capitalize;
+	@include transition(background-color 0.3s $ease-in-out-cubic);
+	.icon_btn {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 37px;
+		height: 37px;
+		font-size: 26px;
+		text-align: center;
+		line-height: 42px;
+		background-color: #05B4F6;
+		vertical-align: middle;
+		color: #fff;
+		@include transition(all 0.3s $ease-in-out-cubic);
+	}
+	&:hover {
+		background-color: #05B4F6;
+		.icon_btn {
+			@include translate3d(7px, 0, 0);
+		}
+	}
+}
+.more_action {
+	color: #FF4545;
+	display: inline-block !important;
+	width: auto !important;
+	font-weight: 600;
+	i {
+		float: right;
+		margin-top: -18px;
+		margin-left: 3px;
+		font-size: 17px;
+	}
+	&:hover {color: darken(#FF4545, 20%);}
+}
+
+
+//----------------------------------*\
+// WORK LIST
+//----------------------------------*/
+.work_list {
+	@include outer-container;
+	max-width: 72em;
+	margin-top: 20px;
+	margin-bottom: -60px;
+	.work_item {
+		@include span-columns(4);
+		@include omega(3n);
+		@include border-radius(7px);
+		background-color: #fff;
+		margin-bottom: 50px;
+		height: 500px;
+		overflow: hidden;
+		@include transition(box-shadow 0.2s ease-in-out);
+		&:hover {
+			@include box-shadow(1px 2px 8px 2px rgba(0, 0, 0, 0.22) );
+		}
+	}
+	.work_wrapper {
+		text-align: left;
+		font-family: $secondary_font;
+	}
+	.work_image {
+		width: 100%;
+		height: 230px;
+		background-repeat:no-repeat;
+		background-position: center center;
+		@include background-size(cover);
+	}
+	.work_info {
+		padding: 15px 20px;
+		overflow: hidden;
+		height: 240px;
+	}
+	.work_title {
+		font-size: 24px;
+		line-height: 33px;
+		font-weight: bold;
+		color: #333;
+		margin: 0;
+		margin-bottom: 0;
+	}
+	.work_desc {
+		color: #000;
+		font-size: 15px;
+		font-family: $secondary_font;
+		font-weight: normal;
+		overflow: hidden;
+	}
+}
